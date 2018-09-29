@@ -1,11 +1,17 @@
 {
+  "dir": "ltr",
+  "lang": "es",
   "name": "pwa",
   "short_name": "pwa",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
-  "display": "standalone",
+  "theme_color": "transparent", 
+  "background_color": "transparent",
+  "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
+  "description": "Un app para tomar notas",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "orientation": "any",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",

@@ -9,7 +9,6 @@ import { SwUpdate } from '@angular/service-worker';
 export class AppComponent implements OnInit{
   title = 'pwa';
   constructor(private swUpdate:SwUpdate){
-
   }
   ngOnInit(): void{
     if(this.swUpdate.isEnabled){
