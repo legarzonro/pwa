@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { NotesService } from '../services/notes.service';
 import {MatSnackBar} from '@angular/material';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,10 @@ export class AppComponent implements OnInit{
   nota:any={};
   notas:any=[];
 
-  constructor(private swUpdate:SwUpdate, private noteServices: NotesService, public snackBar: MatSnackBar){
+  constructor(private swUpdate:SwUpdate,
+             private noteServices: NotesService,
+             public snackBar: MatSnackBar,
+             public authService:AuthService){
     this.noteServices.getNotes().valueChanges().subscribe((fbNotas)=>{
       this.notas=fbNotas;
       console.log(this.notas);
@@ -46,5 +50,9 @@ export class AppComponent implements OnInit{
   SeleccionarNota(nota):void{
     console.log(nota);
     this.nota=nota;
+  }
+
+  login():void{
+    this.authService.loginWithFacebook();
   }
 }

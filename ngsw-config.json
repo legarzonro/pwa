@@ -22,5 +22,19 @@
         ]
       }
     }
+  ],
+  "dataGroups":[
+    {
+      "name":"FirebaseAPI",
+      "urks":[
+        "https://notas-leo.firebaseio.com/**"
+      ],
+      "cacheConfig":{
+        "strategy":"freshness",
+        "maxAge":"2h",
+        "maxSize":100,
+        "timeout":"5s"
+      }
+    }
   ]
 }

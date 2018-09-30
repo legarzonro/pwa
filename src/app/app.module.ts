@@ -15,6 +15,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { NotesService } from '../services/notes.service';
+import { AuthService } from '../services/auth.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { NotesService } from '../services/notes.service';
     FormsModule,
     MatSnackBarModule
   ],
-  providers: [NotesService],
+  providers: [NotesService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
