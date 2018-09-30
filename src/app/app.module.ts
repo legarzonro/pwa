@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -16,6 +15,7 @@ import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { NotesService } from '../services/notes.service';
 import { AuthService } from '../services/auth.service';
+import { MessagingService } from '../services/messaging.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,7 @@ import { AuthService } from '../services/auth.service';
     FormsModule,
     MatSnackBarModule
   ],
-  providers: [NotesService,AuthService],
+  providers: [NotesService,AuthService,MessagingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

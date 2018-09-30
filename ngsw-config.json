@@ -26,7 +26,7 @@
   "dataGroups":[
     {
       "name":"FirebaseAPI",
-      "urks":[
+      "urls":[
         "https://notas-leo.firebaseio.com/**"
       ],
       "cacheConfig":{
